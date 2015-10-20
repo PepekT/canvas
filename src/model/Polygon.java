@@ -6,7 +6,7 @@
 package model;
 
 /**
- *
+ * Baf
  * @author pepek
  */
 public class Polygon {
