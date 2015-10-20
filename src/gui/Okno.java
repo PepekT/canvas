@@ -16,6 +16,7 @@ import java.awt.event.MouseMotionAdapter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
+import model.Polygon;
 import model.Usecka;
 import model.Utvar;
 
@@ -91,7 +92,7 @@ public class Okno extends JFrame {
 	platno.addMouseMotionListener(new MouseMotionAdapter() {
 	    public void mysPosunuta(MouseEvent e) {
 		if (isUsecka) {
-		    utvary.nastavalKonec(e.getX(), e.getY());
+		    utvary.nastavKonec(e.getX(), e.getY());
 		    repaint();
 		}
 	    }

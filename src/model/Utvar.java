@@ -17,7 +17,7 @@ public interface Utvar {
 
     public void nastavZacatek(int x, int y);
 
-    public void nastavalKonec(int x, int y);
+    public void nastavKonec(int x, int y);
     
     
 }
