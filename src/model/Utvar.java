@@ -15,9 +15,9 @@ public interface Utvar {
 
     public void kresli(Graphics g);
 
-    public void nastavZacatek(int x, int y);
+    public void nastavZacatek(double x, double y);
 
-    public void nastavKonec(int x, int y);
+    public void nastavKonec(double x, double y);
     
     
 }

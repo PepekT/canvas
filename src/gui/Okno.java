@@ -65,7 +65,7 @@ public class Okno extends JFrame {
 	    public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == tlcUsecka) {
 		    utvary = new Usecka(platno);
-		    isUsecka = true;
+		    isUsecka = true; 
 		}
 		if (e.getSource() == tlcPolygon) {
 		    utvary = new Polygon();
@@ -74,15 +74,16 @@ public class Okno extends JFrame {
 	    }
 	};
 	MouseListener ml = new MouseAdapter() {
-	    public void mysZmacknuta(MouseEvent e) {
+	    @Override
+	    public void mousePressed(MouseEvent e) {
 		if (e.getButton() == MouseEvent.BUTTON1 && utvary != null) {
 		    utvary.nastavZacatek(e.getX(), e.getY());
 		    platno.pridejUtvar(utvary);
 		}
-
 	    }
 
-	    public void mysUvolnena(MouseEvent e) {
+	    @Override
+	    public void mouseReleased(MouseEvent e) {
 		if (!isUsecka) {
 		    repaint();
 		}
@@ -90,7 +91,7 @@ public class Okno extends JFrame {
 	};
 
 	platno.addMouseMotionListener(new MouseMotionAdapter() {
-	    public void mysPosunuta(MouseEvent e) {
+	    public void mouseDragged(MouseEvent e) {
 		if (isUsecka) {
 		    utvary.nastavKonec(e.getX(), e.getY());
 		    repaint();

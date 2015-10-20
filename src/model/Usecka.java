@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package model;
-
+import java.awt.Color;
 import gui.Platno;
 import java.awt.image.BufferedImage;
-import java.awt.*;
+import java.awt.Graphics;
 
 /**
  *
@@ -21,13 +21,7 @@ public class Usecka implements Utvar {
     protected double y2;
     protected BufferedImage platno;
 
-    public Usecka(double x1, double y1, double x2, double y2) {
-	this.x1 = x1;
-	this.y1 = y1;
-	this.x2 = x2;
-	this.y2 = y2;
-    }
-
+    
     public Usecka(Platno platno) {
 	this.platno = platno.getPlatno();
     }
@@ -88,12 +82,12 @@ public class Usecka implements Utvar {
 	}
 
     @Override
-    public void nastavZacatek(int x, int y){
+    public void nastavZacatek(double x, double y){
 	x1 = x;
 	y1 = y;
     }
     @Override
-    public void nastavKonec(int x, int y){
+    public void nastavKonec(double x, double y){
 	x2 = x;
 	y2 = y;
     }
