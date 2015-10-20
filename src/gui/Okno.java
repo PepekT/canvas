@@ -16,6 +16,7 @@ import java.awt.event.MouseMotionAdapter;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JToolBar;
+import model.Usecka;
 import model.Utvar;
 
 /**
