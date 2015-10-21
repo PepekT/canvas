@@ -35,7 +35,7 @@ public class Okno extends JFrame {
 
     public Okno() {
 	setTitle("Uloha 1");
-	setVisible(true);
+
 	setSize(1024, 768);
 	setDefaultCloseOperation(EXIT_ON_CLOSE);
 	setLayout(new BorderLayout());
@@ -52,12 +52,13 @@ public class Okno extends JFrame {
 	add(platno, BorderLayout.CENTER);
 
 	pridatListener();
-
+	setVisible(true);
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
 	new Okno();
     }
+
     private void pridatListener() {
 	ActionListener al = new ActionListener() {
 
@@ -65,10 +66,10 @@ public class Okno extends JFrame {
 	    public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == tlcUsecka) {
 		    utvary = new Usecka(platno);
-		    isUsecka = true; 
+		    isUsecka = true;
 		}
 		if (e.getSource() == tlcPolygon) {
-		  // utvary = new Polygon(); 
+		    utvary = new Polygon();
 		    isUsecka = false;
 		}
 	    }
@@ -79,7 +80,7 @@ public class Okno extends JFrame {
 		if (e.getButton() == MouseEvent.BUTTON1 && utvary != null) {
 		    utvary.nastavZacatek(e.getX(), e.getY());
 		    platno.pridejUtvar(utvary);
-		    	}
+		}
 	    }
 
 	    @Override
