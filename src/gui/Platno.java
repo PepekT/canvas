@@ -32,7 +32,8 @@ public class Platno extends JLabel {
 	}
 	repaint();
     }
-    public void kresli(Graphics g)  {
+    @Override
+    public void paint(Graphics g)  {
 	super.paint(g);
 	
 	for(Utvar utvar : utvary)   {

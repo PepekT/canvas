@@ -68,7 +68,7 @@ public class Okno extends JFrame {
 		    isUsecka = true; 
 		}
 		if (e.getSource() == tlcPolygon) {
-		    utvary = new Polygon();
+		  // utvary = new Polygon(); 
 		    isUsecka = false;
 		}
 	    }
@@ -79,7 +79,7 @@ public class Okno extends JFrame {
 		if (e.getButton() == MouseEvent.BUTTON1 && utvary != null) {
 		    utvary.nastavZacatek(e.getX(), e.getY());
 		    platno.pridejUtvar(utvary);
-		}
+		    	}
 	    }
 
 	    @Override
